@@ -12,7 +12,7 @@ public class ConfigReader {
     public static String getConfig (String key) {
         JSONParser parser = new JSONParser();
         JSONObject jsonObject = null;
-        try (FileReader reader = new FileReader("src/test/resources/config.json")) {
+        try (FileReader reader = new FileReader("src/test/java/resources/config.json")) {
             jsonObject = (JSONObject) parser.parse(reader);
         } catch (IOException | ParseException e) {
             e.printStackTrace();

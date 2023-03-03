@@ -1,4 +1,5 @@
 {
   "url": "https://demoqa.com/books",
-  "baseUri": "https://api.vk.com/method/"
+  "browserName": "chrome"
+
 }
