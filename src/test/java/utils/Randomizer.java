@@ -5,7 +5,6 @@ import java.util.Random;
 public class Randomizer {
 
     private final static String LAT_SCHEME = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    private final static Integer StringLenght = 10;
 
     private static String getRandomString(Integer StringLenght, String schemeName) {
 
@@ -22,9 +21,8 @@ public class Randomizer {
         return getRandomString(stringLenght, LAT_SCHEME);
     }
 
-    public static int getRandomNumber (){
-        int randNumb = (int) (Math.random()*20);
-        System.out.println("Random number: " + randNumb);
+    public static int getRandomNumber() {
+        int randNumb = (int) (Math.random() * 20);
         return randNumb;
     }
 

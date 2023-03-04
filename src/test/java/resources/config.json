@@ -1,5 +1,5 @@
 {
   "url": "https://demoqa.com/books",
-  "browserName": "chrome"
-
+  "browserName": "chrome",
+  "baseUri": "https://demoqa.com"
 }

@@ -3,7 +3,6 @@ package elements;
 import driverandbrowsers.Driver;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -40,7 +39,7 @@ public abstract class BaseElements {
         return Driver.getDriver().findElement(locator).getText();
     }
 
-    public void sendKeys(String absolutePath){
-        Driver.getDriver().findElement(locator).sendKeys();
+    public void sendKeys(String string){
+        Driver.getDriver().findElement(locator).sendKeys(string);
     }
 }
