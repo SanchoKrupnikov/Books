@@ -25,6 +25,4 @@ public class Randomizer {
         int randNumb = (int) (Math.random() * 20);
         return randNumb;
     }
-
-
 }

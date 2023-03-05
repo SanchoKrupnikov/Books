@@ -1,16 +1,15 @@
 package driverandbrowsers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import utils.ConfigReader;
+import utils.JsonUtils;
 
 public class BrowserFactory {
-    private static String browserName = ConfigReader.getConfig("browserName");
+    private static String browserName = JsonUtils.getConfig("browserName");
     private static WebDriver driver;
 
     public BrowserFactory() {

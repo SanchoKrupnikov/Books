@@ -11,11 +11,11 @@ public class BookStoreMainPage extends BasePage {
     private static final Button loginButton = new Button("Login Button",
             By.xpath("//button[@id='login']"));
 
-    public BookStoreMainPage () {
+    public BookStoreMainPage() {
         super(uniqueElement, "MainPage");
     }
 
-    public void clickLoginButton (){
+    public void clickLoginButton() {
         loginButton.click();
     }
 }

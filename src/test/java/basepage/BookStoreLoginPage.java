@@ -39,6 +39,7 @@ public class BookStoreLoginPage extends BasePage {
     }
 
     public String getUserName() {
+        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         String userName = username_field.find().getText();
         return userName;
     }

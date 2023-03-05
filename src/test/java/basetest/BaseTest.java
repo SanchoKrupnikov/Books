@@ -1,25 +1,21 @@
 package basetest;
 
 import driverandbrowsers.Driver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import utils.ConfigReader;
-
-import java.util.concurrent.TimeUnit;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import utils.JsonUtils;
 
 public class BaseTest {
 
-    private static final String URL = ConfigReader.getConfig("url");
+    private static final String URL = JsonUtils.getConfig("url");
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
-        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Driver.getDriver().get(URL);
     }
 
-    @AfterMethod
+    @AfterTest
     public void quit() {
-        //    Driver.getDriver().quit();
+        Driver.getDriver().quit();
     }
-
 }

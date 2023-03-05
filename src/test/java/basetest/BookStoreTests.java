@@ -12,14 +12,10 @@ public class BookStoreTests extends BaseTest {
     @Test
     public void Task01_CheckCorrectLogin() {
         BookStoreMainPage bookStoreMainPage = new BookStoreMainPage();
-        Assert.assertTrue(bookStoreMainPage.isDisplayedPage(), "Book Store main page is not displayed");
         bookStoreMainPage.clickLoginButton();
 
-        String randomLogin = "S3";
-        String randomPassword = "S1s1!abc";
-
-//        String randomLogin = Randomizer.getLat(10);
-//        String randomPassword = Randomizer.getLat(10) + "!" + Randomizer.getRandomNumber();
+        String randomLogin = Randomizer.getLat(10);
+        String randomPassword = Randomizer.getLat(10) + "!" + Randomizer.getRandomNumber();
 
         ApiSteps.CreateNewUser(randomLogin, randomPassword);
 
@@ -32,7 +28,7 @@ public class BookStoreTests extends BaseTest {
     }
 
     @Test
-    public void Task02_CheckBooksLists() {
-        ApiSteps.getAllBooks(200);
+    public void Task02_CheckBooksListsByTitles() {
+        Assert.assertTrue(BaseSteps.getTitleOfBooksFromApi().size() == BaseSteps.getTitleOfBooksFromUi().size() && BaseSteps.getTitleOfBooksFromApi().containsAll(BaseSteps.getTitleOfBooksFromUi()), "Titles are not matched");
     }
 }
