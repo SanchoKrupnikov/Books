@@ -2,6 +2,7 @@ package basetest;
 
 import driverandbrowsers.Driver;
 import models.Root;
+
 import org.openqa.selenium.By;
 import restutils.ApiSteps;
 import utils.Counter;
@@ -10,6 +11,8 @@ import utils.JsonUtils;
 import java.util.ArrayList;
 
 public class BaseSteps {
+
+  //  final static Logger logger = Logger.getLogger(BaseSteps.class);
 
     private static final String BOOK_TITLE = "//div[@class='books-wrapper']//div[%s][@class='rt-tr-group']//a";
 
@@ -23,7 +26,7 @@ public class BaseSteps {
         return uiBookTitleList;
     }
 
-    public static ArrayList<String> getTitleOfBooksFromApi (){
+    public static ArrayList<String> getTitleOfBooksFromApi() {
         Root bookResponse = JsonUtils.getObject(ApiSteps.getBooksListFromApiRequest(), Root.class);
         ArrayList<String> apiBookTitleList = new ArrayList<>();
         for (int i = 0; i < 8; i++) {

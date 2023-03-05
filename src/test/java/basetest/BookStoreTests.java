@@ -2,6 +2,9 @@ package basetest;
 
 import basepage.BookStoreLoginPage;
 import basepage.BookStoreMainPage;
+
+
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import restutils.ApiSteps;
@@ -9,9 +12,12 @@ import utils.Randomizer;
 
 public class BookStoreTests extends BaseTest {
 
+    private final static Logger logger = Logger.getLogger(BaseTest.class);
+
     @Test
     public void Task01_CheckCorrectLogin() {
         BookStoreMainPage bookStoreMainPage = new BookStoreMainPage();
+        logger.info("Click login button.");
         bookStoreMainPage.clickLoginButton();
 
         String randomLogin = Randomizer.getLat(10);
