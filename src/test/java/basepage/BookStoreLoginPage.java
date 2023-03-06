@@ -4,6 +4,7 @@ import driverandbrowsers.Driver;
 import elements.Button;
 import elements.Title;
 import elements.WebElement;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
@@ -11,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BookStoreLoginPage extends BasePage {
 
+    private final static Logger logger = Logger.getLogger(BookStoreLoginPage.class);
     private static final Title uniqueElement = new Title("Book Store LoginPage Logo",
             By.xpath("//div[@class='pattern-backgound playgound-header']"));
     private final WebElement login_input = new WebElement ("Login input",

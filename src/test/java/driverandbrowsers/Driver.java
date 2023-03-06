@@ -1,9 +1,12 @@
 package driverandbrowsers;
 
+import basepage.BasePage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 public class Driver {
 
+    private final static Logger logger = Logger.getLogger(Driver.class);
     private static WebDriver driver = null;
 
     public static WebDriver getDriver() {
